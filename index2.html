@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="rs" onkeydown="shoW()"></textarea>
+<script>
+    let arr = [];
+    let str = '';
+    arr[1] = "1";
+    arr[2] = " ";
+    arr[3] = "M";
+    arr[4] = "i";
+    arr[5] = "n";
+    arr[6] = "h";
+    arr[7] = " ";
+    arr[8] = "T";
+    arr[9] = "a";
+    arr[10] = "o";
+
+   function shoW() {
+       let text=document.getElementById('rs').value;
+       for (let i = 1; i <=text.length ; i++) {
+           str+=arr[i];
+           if (i===11){
+               str=''
+           }
+
+       }
+       document.getElementById('rs').value=str;
+       str='';
+       setTimeout("shoW()",1)
+
+   }
+</script>
+</body>
+</html>

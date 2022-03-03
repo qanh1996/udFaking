@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="rs" onkeydown="hienThi()"></textarea>
+<script>
+    let array = [];
+    let str = "";
+    array[1] = "I";
+    array[2] = " ";
+    array[3] = "L";
+    array[4] = "O";
+    array[5] = "V";
+    array[6] = "E";
+    array[7] = " ";
+    array[8] = "Y";
+    array[9] = "O";
+    array[10] = "U";
+    array[11] = " ";
+    array[12] = "!";
+    array[13] = "!";
+    array[14] = "!";
+
+
+    function hienThi() {
+        let text = document.getElementById("rs").value;
+        for (let i = 1; i <= text.length; i++) {
+            str = str + array[i];
+            if (i === 14) {
+                str = "";
+            }
+        }
+        document.getElementById("rs").value = str;
+        str = "";
+        setTimeout("hienThi()", 1);
+    }
+</script>
+</body>
+</html>
